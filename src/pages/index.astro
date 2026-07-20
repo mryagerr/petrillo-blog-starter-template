@@ -2,20 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
-
-const events = await getCollection('events');
-const now = Date.now();
-
-const upcomingEvents = events
-	.filter((event) => event.data.date.valueOf() >= now)
-	.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
-
-const archivedEvents = events
-	.filter((event) => event.data.date.valueOf() < now)
-	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <!doctype html>
@@ -36,7 +23,7 @@ const archivedEvents = events
 				border-bottom: 4px solid var(--accent);
 				padding-bottom: 0.3em;
 			}
-			.event-list {
+			.trip-list {
 				list-style: none;
 				margin: 0;
 				padding: 0;
@@ -44,7 +31,7 @@ const archivedEvents = events
 				flex-direction: column;
 				gap: 1em;
 			}
-			.event-card {
+			.trip-card {
 				display: block;
 				padding: 1em 1.2em;
 				border-radius: 12px;
@@ -54,32 +41,16 @@ const archivedEvents = events
 				color: inherit;
 				transition: 0.2s ease;
 			}
-			.event-card:hover {
+			.trip-card:hover {
 				transform: translateY(-2px);
 			}
-			.event-card .date {
-				margin: 0;
-				color: rgb(var(--gray));
-				font-size: 0.9em;
-			}
-			.event-card .title {
+			.trip-card .title {
 				margin: 0.1em 0 0.3em 0;
 				color: rgb(var(--black));
 			}
-			.event-card .location {
-				margin: 0 0 0.4em 0;
-				color: rgb(var(--gray));
-				font-size: 0.9em;
-			}
-			.event-card .description {
+			.trip-card .description {
 				margin: 0;
-			}
-			.archived .event-card {
-				opacity: 0.85;
-			}
-			.empty {
 				color: rgb(var(--gray));
-				font-style: italic;
 			}
 			.info-section {
 				padding: 1.5em;
@@ -105,76 +76,35 @@ const archivedEvents = events
 			<div class="intro">
 				<h1>Petrillo Family Activities & Planning</h1>
 				<p>
-					This is our home base for keeping everyone in the loop — planning what's next and looking
-					back on the outings we've already had.
+					This is our home base for keeping everyone in the loop on the outings we've planned and
+					the trips we've already taken.
 				</p>
 			</div>
 
 			<section>
-				<h2>Upcoming Events</h2>
-				{
-					upcomingEvents.length > 0 ? (
-						<ul class="event-list">
-							{upcomingEvents.map((event) => (
-								<li>
-									<a class="event-card" href={`/events/${event.id}/`}>
-										<p class="date">
-											<FormattedDate date={event.data.date} />
-										</p>
-										<h3 class="title">{event.data.title}</h3>
-										{event.data.location && <p class="location">📍 {event.data.location}</p>}
-										<p class="description">{event.data.description}</p>
-									</a>
-								</li>
-							))}
-						</ul>
-					) : (
-						<p class="empty">Nothing on the calendar yet — check back soon!</p>
-					)
-				}
-			</section>
-
-			<section class="archived">
-				<h2>Archived Events</h2>
-				{
-					archivedEvents.length > 0 ? (
-						<ul class="event-list">
-							{archivedEvents.map((event) => (
-								<li>
-									<a class="event-card" href={`/events/${event.id}/`}>
-										<p class="date">
-											<FormattedDate date={event.data.date} />
-										</p>
-										<h3 class="title">{event.data.title}</h3>
-										{event.data.location && <p class="location">📍 {event.data.location}</p>}
-										<p class="description">{event.data.description}</p>
-									</a>
-								</li>
-							))}
-						</ul>
-					) : (
-						<p class="empty">No past events documented yet.</p>
-					)
-				}
+				<h2>Trips</h2>
+				<ul class="trip-list">
+					<li>
+						<a class="trip-card" href="/upcoming-trip/">
+							<h3 class="title">Upcoming Trip Planner</h3>
+							<p class="description">Countdown, itinerary, packing list, and budget for what's next.</p>
+						</a>
+					</li>
+					<li>
+						<a class="trip-card" href="/trips/japan-2026/">
+							<h3 class="title">Japan 2026 Trip</h3>
+							<p class="description">Photo retrospective from the trip.</p>
+						</a>
+					</li>
+				</ul>
 			</section>
 
 			<section class="info-section">
 				<h2>Info</h2>
-				<p>A few things worth knowing if you're planning or looking back on a family outing:</p>
+				<p>A few things worth knowing:</p>
 				<ul>
-					<li>
-						Have something to add to the calendar? Drop the details in the family group chat and
-						it'll get added here as an upcoming event.
-					</li>
-					<li>
-						After an outing wraps up, it moves down to Archived Events so we've got a running
-						record of what we did and where — good for settling "wait, when was that?" arguments.
-					</li>
-					<li>Each event's page has the full details: date, location, and anything worth knowing.</li>
-					<li>
-						Questions or corrections? Reach out to whoever's organizing the event, or post in the
-						group chat.
-					</li>
+					<li>Have a new trip to add? Drop the details in the family group chat and it'll get added here.</li>
+					<li>Questions or corrections? Reach out to whoever's organizing, or post in the group chat.</li>
 				</ul>
 			</section>
 		</main>
