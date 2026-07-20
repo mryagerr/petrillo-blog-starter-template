@@ -39,6 +39,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			.info-section li {
 				margin-bottom: 0.4em;
 			}
+			.trip-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1.5em;
+			}
+			.trip-card {
+				padding: 1.5em;
+				border-radius: 12px;
+				background: rgb(var(--gray-light));
+			}
+			.trip-card h3 {
+				margin-bottom: 0.2em;
+			}
+			.trip-meta {
+				margin: 0 0 0.5em 0;
+				color: rgb(var(--gray));
+			}
+			.trip-teaser {
+				font-style: italic;
+			}
+			.trip-legs {
+				margin: 1em 0 0 0;
+				padding-left: 1.2em;
+			}
+			.trip-legs li {
+				margin-bottom: 0.6em;
+			}
 		</style>
 	</head>
 	<body>
@@ -51,6 +81,48 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					the trips we've already taken.
 				</p>
 			</div>
+
+			<section>
+				<h2>Previous Trips</h2>
+				<ul class="trip-list">
+					<li class="trip-card">
+						<img src="/trip-japan-2026.jpg" alt="" width="800" height="400" />
+						<h3>Japan — June 2026</h3>
+						<p class="trip-meta">
+							June 5–24, 2026 · 19 nights · Michael, Brittany, and the boys (7 &amp; 4)
+						</p>
+						<p class="trip-teaser">19 nights, 4 legs, 3 theme parks, 2 day trips, 0 cars.</p>
+						<p>
+							Fully car-free: Shinkansen, local rail/metro, the Hakone Freepass, and buses got us
+							everywhere, with Yamato luggage forwarding between every leg. Route: Tokyo Bay →
+							Hakone → Osaka → Tokyo → home via Haneda.
+						</p>
+						<ul class="trip-legs">
+							<li>
+								<strong>Tokyo Bay / Disney</strong> — Jun 6–10, Grand Nikko Tokyo Bay Maihama.
+								Sanno Matsuri festival, Tokyo DisneySea, Tokyo Disneyland.
+							</li>
+							<li>
+								<strong>Hakone</strong> — Jun 10–13, Rakuten STAY TERRACE Kowakudani. Private
+								in-room hot spring, the Hakone Open-Air Museum, Lake Ashi pirate ship + Hakone
+								Shrine + ropeway loop.
+							</li>
+							<li>
+								<strong>Osaka</strong> — Jun 13–20, Ostay Vermillion Namba. Osaka Aquarium,
+								Dotonbori night cruise, Fushimi Inari at dawn plus the sake district on a Kyoto
+								day trip, Super Nintendo World at USJ, Kirby Café, the Sakai knife district, and
+								a Kobe day trip.
+							</li>
+							<li>
+								<strong>Tokyo</strong> — Jun 20–24, Hotel RIN Roppongi. Pokémon Center Tokyo DX,
+								Michael's birthday (Shibuya Sky, an NPB baseball game, and birthday dinner),
+								teamLab Borderless at Azabudai Hills, REONA Sushi, a sumo experience, and
+								Kappabashi kitchen town (VG10 chef's knife).
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
 
 			<section class="info-section">
 				<h2>Info</h2>
