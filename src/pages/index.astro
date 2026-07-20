@@ -2,48 +2,181 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+
+const events = await getCollection('events');
+const now = Date.now();
+
+const upcomingEvents = events
+	.filter((event) => event.data.date.valueOf() >= now)
+	.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+
+const archivedEvents = events
+	.filter((event) => event.data.date.valueOf() < now)
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 800px;
+			}
+			.intro {
+				margin-bottom: 2em;
+			}
+			section {
+				margin-bottom: 3em;
+			}
+			section h2 {
+				border-bottom: 4px solid var(--accent);
+				padding-bottom: 0.3em;
+			}
+			.event-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+			.event-card {
+				display: block;
+				padding: 1em 1.2em;
+				border-radius: 12px;
+				background: white;
+				box-shadow: var(--box-shadow);
+				text-decoration: none;
+				color: inherit;
+				transition: 0.2s ease;
+			}
+			.event-card:hover {
+				transform: translateY(-2px);
+			}
+			.event-card .date {
+				margin: 0;
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			.event-card .title {
+				margin: 0.1em 0 0.3em 0;
+				color: rgb(var(--black));
+			}
+			.event-card .location {
+				margin: 0 0 0.4em 0;
+				color: rgb(var(--gray));
+				font-size: 0.9em;
+			}
+			.event-card .description {
+				margin: 0;
+			}
+			.archived .event-card {
+				opacity: 0.85;
+			}
+			.empty {
+				color: rgb(var(--gray));
+				font-style: italic;
+			}
+			.info-section {
+				padding: 1.5em;
+				border-radius: 12px;
+				background: rgb(var(--gray-light));
+			}
+			.info-section h2 {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			.info-section ul {
+				margin: 0.5em 0 0 0;
+				padding-left: 1.2em;
+			}
+			.info-section li {
+				margin-bottom: 0.4em;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div class="intro">
+				<h1>Petrillo Family Activities & Planning</h1>
+				<p>
+					This is our home base for keeping everyone in the loop — planning what's next and looking
+					back on the outings we've already had.
+				</p>
+			</div>
+
+			<section>
+				<h2>Upcoming Events</h2>
+				{
+					upcomingEvents.length > 0 ? (
+						<ul class="event-list">
+							{upcomingEvents.map((event) => (
+								<li>
+									<a class="event-card" href={`/events/${event.id}/`}>
+										<p class="date">
+											<FormattedDate date={event.data.date} />
+										</p>
+										<h3 class="title">{event.data.title}</h3>
+										{event.data.location && <p class="location">📍 {event.data.location}</p>}
+										<p class="description">{event.data.description}</p>
+									</a>
+								</li>
+							))}
+						</ul>
+					) : (
+						<p class="empty">Nothing on the calendar yet — check back soon!</p>
+					)
+				}
+			</section>
+
+			<section class="archived">
+				<h2>Archived Events</h2>
+				{
+					archivedEvents.length > 0 ? (
+						<ul class="event-list">
+							{archivedEvents.map((event) => (
+								<li>
+									<a class="event-card" href={`/events/${event.id}/`}>
+										<p class="date">
+											<FormattedDate date={event.data.date} />
+										</p>
+										<h3 class="title">{event.data.title}</h3>
+										{event.data.location && <p class="location">📍 {event.data.location}</p>}
+										<p class="description">{event.data.description}</p>
+									</a>
+								</li>
+							))}
+						</ul>
+					) : (
+						<p class="empty">No past events documented yet.</p>
+					)
+				}
+			</section>
+
+			<section class="info-section">
+				<h2>Info</h2>
+				<p>A few things worth knowing if you're planning or looking back on a family outing:</p>
+				<ul>
+					<li>
+						Have something to add to the calendar? Drop the details in the family group chat and
+						it'll get added here as an upcoming event.
+					</li>
+					<li>
+						After an outing wraps up, it moves down to Archived Events so we've got a running
+						record of what we did and where — good for settling "wait, when was that?" arguments.
+					</li>
+					<li>Each event's page has the full details: date, location, and anything worth knowing.</li>
+					<li>
+						Questions or corrections? Reach out to whoever's organizing the event, or post in the
+						group chat.
+					</li>
+				</ul>
+			</section>
 		</main>
 		<Footer />
 	</body>
