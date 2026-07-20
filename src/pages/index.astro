@@ -23,6 +23,35 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				border-bottom: 4px solid var(--accent);
 				padding-bottom: 0.3em;
 			}
+			.trip-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+			.trip-card {
+				display: block;
+				padding: 1em 1.2em;
+				border-radius: 12px;
+				background: white;
+				box-shadow: var(--box-shadow);
+				text-decoration: none;
+				color: inherit;
+				transition: 0.2s ease;
+			}
+			.trip-card:hover {
+				transform: translateY(-2px);
+			}
+			.trip-card .title {
+				margin: 0.1em 0 0.3em 0;
+				color: rgb(var(--black));
+			}
+			.trip-card .description {
+				margin: 0;
+				color: rgb(var(--gray));
+			}
 			.info-section {
 				padding: 1.5em;
 				border-radius: 12px;
@@ -51,6 +80,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					the trips we've already taken.
 				</p>
 			</div>
+
+			<section>
+				<h2>Trips</h2>
+				<ul class="trip-list">
+					<li>
+						<a class="trip-card" href="/upcoming-trip/">
+							<h3 class="title">Las Vegas &amp; Zion &mdash; June 2027</h3>
+							<p class="description">Route, lodging, day-by-day itinerary, reservations, and packing list.</p>
+						</a>
+					</li>
+				</ul>
+			</section>
 
 			<section class="info-section">
 				<h2>Info</h2>

@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Vegas &amp; Zion &mdash; Trip Overview</title>
+<meta name="description" content="Michael Petrillo's Las Vegas &amp; Zion National Park trip overview: route, lodging, day-by-day itinerary, reservations, packing list, and contingency notes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sandstone-50: #fdf8f0;
+    --sandstone-100: #f7ead4;
+    --sandstone-200: #ecd6ae;
+    --sandstone-300: #ddbd85;
+    --terracotta-500: #c1653d;
+    --terracotta-600: #a34f2c;
+    --terracotta-100: #f3ddd0;
+    --sage-400: #8a9a7b;
+    --sage-500: #71835f;
+    --sage-100: #e4e9dd;
+    --dusk-500: #7d5ba6;
+    --dusk-100: #ece3f4;
+    --ink-900: #362a20;
+    --ink-700: #574539;
+    --ink-500: #7a685b;
+    --paper: #fbf5ea;
+    --card: #fffcf5;
+    --border: #e6d6b8;
+    --shadow: 0 1px 2px rgba(54, 42, 32, 0.06), 0 4px 14px rgba(54, 42, 32, 0.06);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(193, 101, 61, 0.07), transparent 45%),
+      radial-gradient(circle at 90% 10%, rgba(113, 131, 95, 0.08), transparent 40%);
+    color: var(--ink-900);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    color: var(--ink-900);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  a { color: var(--terracotta-600); }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.1rem 3rem;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 2.6rem 1.1rem 2.2rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--sandstone-200), var(--sandstone-100) 70%, var(--paper));
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    color: var(--terracotta-600);
+    margin: 0 0 0.6rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.08;
+  }
+
+  .hero-sub {
+    margin: 0.55rem 0 0;
+    font-size: 1.02rem;
+    color: var(--ink-700);
+  }
+
+  .hero-dates {
+    margin-top: 0.35rem;
+    font-size: 0.92rem;
+    color: var(--ink-500);
+  }
+
+  .route-line {
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .route-line .stop {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.25rem 0.7rem;
+  }
+
+  .route-line .stop.optional {
+    border-style: dashed;
+    color: var(--ink-500);
+    font-weight: 500;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 1.5rem auto 0.5rem;
+    max-width: 420px;
+  }
+
+  .countdown-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.6rem 0.4rem 0.5rem;
+    flex: 1;
+    box-shadow: var(--shadow);
+  }
+
+  .countdown-item span {
+    display: block;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--terracotta-600);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown-item label {
+    display: block;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-500);
+    margin-top: 0.15rem;
+  }
+
+  .countdown-label {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    color: var(--ink-500);
+    font-style: italic;
+  }
+
+  .countdown-label.arrived {
+    color: var(--sage-500);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ---------- Section shell ---------- */
+  section.block {
+    margin-top: 2.2rem;
+  }
+
+  .block-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+    padding-left: 0.1rem;
+  }
+
+  .block-head .num {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--sandstone-50);
+    background: var(--sage-500);
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .block-head h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .block-sub {
+    margin: -0.5rem 0 1rem;
+    padding-left: 2.3rem;
+    font-size: 0.88rem;
+    color: var(--ink-500);
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.1rem 1.15rem 1.25rem;
+  }
+
+  /* ---------- Lodging ---------- */
+  .lodging-card {
+    margin-bottom: 0.9rem;
+  }
+
+  .lodging-card:last-child { margin-bottom: 0; }
+
+  .lodging-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .lodging-title h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .status-pill {
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  .status-pill.confirmed {
+    background: var(--sage-100);
+    color: var(--sage-500);
+  }
+
+  .status-pill.tbd {
+    background: var(--dusk-100);
+    color: var(--dusk-500);
+  }
+
+  dl.details {
+    margin: 0.9rem 0 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 0.65rem;
+    column-gap: 1rem;
+    font-size: 0.94rem;
+  }
+
+  dl.details dt {
+    color: var(--ink-500);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  dl.details dd {
+    margin: 0;
+    color: var(--ink-900);
+  }
+
+  .booking-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .booking-num {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+
+  .btn {
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid var(--terracotta-500);
+    background: var(--terracotta-100);
+    color: var(--terracotta-600);
+    border-radius: 20px;
+    padding: 0.3rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+
+  .btn:hover { background: var(--terracotta-500); color: #fff; }
+  .btn:active { transform: scale(0.96); }
+
+  .btn.copied {
+    background: var(--sage-500);
+    border-color: var(--sage-500);
+    color: #fff;
+  }
+
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .card-foot {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .total-paid {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    color: var(--terracotta-600);
+  }
+
+  .total-paid small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--ink-500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ---------- Itinerary ---------- */
+  .day-card {
+    margin-bottom: 1rem;
+  }
+
+  .day-card:last-child { margin-bottom: 0; }
+
+  .day-card.optional-day .card {
+    border-style: dashed;
+  }
+
+  .day-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .day-head h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .day-head .day-tag {
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--sage-500);
+    background: var(--sage-100);
+    padding: 0.2rem 0.55rem;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  .day-note {
+    font-size: 0.82rem;
+    color: var(--ink-500);
+    font-style: italic;
+    margin: -0.4rem 0 0.75rem;
+  }
+
+  .slot {
+    display: grid;
+    grid-template-columns: 5.4rem 1fr;
+    gap: 0.15rem 0.7rem;
+    padding: 0.55rem 0;
+    border-top: 1px solid var(--sandstone-100);
+    align-items: start;
+  }
+
+  .slot:first-of-type { border-top: none; }
+
+  .slot .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 600;
+    color: var(--ink-500);
+    padding-top: 0.15rem;
+  }
+
+  .slot [contenteditable] {
+    font-size: 0.92rem;
+    color: var(--ink-900);
+    outline: none;
+    border-bottom: 1px dashed transparent;
+    padding: 0.1rem 0.2rem;
+    margin: -0.1rem -0.2rem;
+    border-radius: 4px;
+    min-height: 1.3em;
+  }
+
+  .slot [contenteditable]:hover {
+    border-bottom-color: var(--sandstone-300);
+    background: var(--sandstone-100);
+  }
+
+  .slot [contenteditable]:focus {
+    background: var(--terracotta-100);
+    border-bottom-color: var(--terracotta-500);
+  }
+
+  .edit-hint {
+    font-size: 0.7rem;
+    color: var(--ink-500);
+    text-align: center;
+    margin: 0.9rem 0 0;
+  }
+
+  /* ---------- Reservations ---------- */
+  ul.reslist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  ul.reslist li {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr;
+    gap: 0 0.7rem;
+    padding: 0.5rem 0.2rem;
+    border-bottom: 1px solid var(--sandstone-100);
+  }
+
+  ul.reslist li:last-child { border-bottom: none; }
+
+  ul.reslist input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-top: 0.15rem;
+    accent-color: var(--sage-500);
+    flex-shrink: 0;
+  }
+
+  .res-body .res-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--ink-900);
+  }
+
+  ul.reslist input:checked ~ .res-body .res-title,
+  ul.reslist li:has(input:checked) .res-title {
+    text-decoration: line-through;
+    color: var(--ink-500);
+  }
+
+  .res-deadline {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--terracotta-600);
+    background: var(--terracotta-100);
+    border-radius: 10px;
+    padding: 0.1rem 0.5rem;
+  }
+
+  .res-deadline.done {
+    color: var(--sage-500);
+    background: var(--sage-100);
+  }
+
+  .res-note {
+    margin: 0.2rem 0 0;
+    font-size: 0.86rem;
+    color: var(--ink-700);
+  }
+
+  /* ---------- Packing ---------- */
+  .info-sub {
+    margin: 0 0 1.1rem;
+  }
+
+  .info-sub:last-child { margin-bottom: 0; }
+
+  .info-sub h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.35rem;
+    color: var(--terracotta-600);
+  }
+
+  .info-sub p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-700);
+  }
+
+  ul.checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  ul.checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.2rem;
+    border-radius: 8px;
+  }
+
+  ul.checklist li:hover { background: var(--sandstone-100); }
+
+  ul.checklist input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: var(--sage-500);
+    flex-shrink: 0;
+  }
+
+  ul.checklist label {
+    font-size: 0.9rem;
+    color: var(--ink-900);
+  }
+
+  ul.checklist input:checked + label {
+    color: var(--ink-500);
+    text-decoration: line-through;
+  }
+
+  /* ---------- Contingency ---------- */
+  .risk-card {
+    margin-bottom: 0.9rem;
+  }
+
+  .risk-card:last-child { margin-bottom: 0; }
+
+  .risk-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .risk-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--terracotta-100);
+    color: var(--terracotta-600);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .risk-title h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .risk-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-700);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 2.6rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--ink-500);
+  }
+
+  footer .footer-actions {
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  footer button.linklike, footer a {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.78rem;
+    color: var(--ink-500);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (min-width: 620px) {
+    .wrap { padding: 0 1.6rem 3.5rem; }
+    .hero { padding: 3.4rem 1.6rem 2.6rem; }
+    dl.details { grid-template-columns: 8.5rem 1fr; }
+  }
+
+  @media (min-width: 860px) {
+    .wrap { max-width: 780px; }
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: #fff; }
+    .hero {
+      background: none;
+      border-bottom: 2px solid #000;
+      padding: 0.5rem 0 1rem;
+    }
+    .countdown, .btn, footer .footer-actions, .edit-hint {
+      display: none !important;
+    }
+    .card, .day-card .card {
+      box-shadow: none;
+      border: 1px solid #999;
+      break-inside: avoid;
+    }
+    section.block { margin-top: 1rem; }
+    a { color: #000; text-decoration: none; }
+    .wrap { max-width: 100%; padding: 0 0.3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">Trip Overview</p>
+    <h1>Las Vegas &amp; Zion</h1>
+    <p class="hero-sub">2 adults &middot; 2 kids &middot; from San Diego</p>
+    <p class="hero-dates">Friday/Saturday, June 18&ndash;19 &ndash; Tuesday, June 22, 2027</p>
+
+    <div class="route-line">
+      <span class="stop">Las Vegas</span>
+      <span>&rarr;</span>
+      <span class="stop optional">Valley of Fire (optional)</span>
+      <span>&rarr;</span>
+      <span class="stop">Springdale / Zion</span>
+      <span>&rarr;</span>
+      <span class="stop">Las Vegas</span>
+    </div>
+
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="countdown-item"><span id="cd-days">--</span><label>Days</label></div>
+      <div class="countdown-item"><span id="cd-hours">--</span><label>Hrs</label></div>
+      <div class="countdown-item"><span id="cd-mins">--</span><label>Min</label></div>
+      <div class="countdown-item"><span id="cd-secs">--</span><label>Sec</label></div>
+    </div>
+    <p class="countdown-label" id="countdown-label">until Zion check-in (Sat, Jun 19)</p>
+  </header>
+
+  <!-- ---------------- Day-by-day ---------------- -->
+  <section class="block" id="itinerary">
+    <div class="block-head">
+      <span class="num">1</span>
+      <h2>Day-by-Day Timeline</h2>
+    </div>
+    <p class="block-sub">Arrival in Las Vegas through departure &mdash; drive times included. Tap any plan to edit it.</p>
+
+    <div class="day-card optional-day" data-day="day0">
+      <div class="card">
+        <div class="day-head">
+          <h3>Fri, Jun 18 &mdash; optional</h3>
+          <span class="day-tag">Vegas Arrival</span>
+        </div>
+        <p class="day-note">Only needed if you fly/drive in a day early instead of arriving Saturday. Skip this card entirely for the direct Saturday option.</p>
+        <div class="slot"><span class="label">Fly/Drive</span><div contenteditable="true" data-field="fly">SAN&rarr;LAS is ~1 hr nonstop; driving is ~5&ndash;5.5 hrs (325 mi) via I-15. Either way, pick up the rental car at LAS.</div></div>
+        <div class="slot"><span class="label">Evening</span><div contenteditable="true" data-field="evening">Easy dinner off-Strip, early night &mdash; big travel/hiking day tomorrow. Overnight at a Vegas hotel (not yet booked).</div></div>
+      </div>
+    </div>
+
+    <div class="day-card" data-day="day1">
+      <div class="card">
+        <div class="day-head">
+          <h3>Sat, Jun 19</h3>
+          <span class="day-tag">Vegas &rarr; Zion</span>
+        </div>
+        <div class="slot"><span class="label">Morning</span><div contenteditable="true" data-field="morning">If arriving today: land at LAS and get the rental car (allow time &mdash; summer lines are long). If coming from a Friday-night Vegas stay: check out and grab breakfast.</div></div>
+        <div class="slot"><span class="label">Midday</span><div contenteditable="true" data-field="midday">Optional 1&ndash;1.5 hr detour to Valley of Fire State Park (NV-169, ~45 min from Vegas) for the Fire Wave and Elephant Rock &mdash; short, easy walks; best done before the heat peaks. Otherwise, direct I-15 N &rarr; UT-9 E to Springdale, ~2.5&ndash;3 hrs.</div></div>
+        <div class="slot"><span class="label">Afternoon</span><div contenteditable="true" data-field="afternoon">Arrive Springdale (with the detour, total drive is ~4&ndash;4.5 hrs door to door). Check in at Desert Pearl Inn (check-in ~3&ndash;4pm), then straight to the pool to cool off from the drive.</div></div>
+        <div class="slot"><span class="label">Evening</span><div contenteditable="true" data-field="evening">Easy sunset stroll on the Pa'rus Trail (paved, flat, stroller/kid friendly) to get oriented, dinner in Springdale.</div></div>
+      </div>
+    </div>
+
+    <div class="day-card" data-day="day2">
+      <div class="card">
+        <div class="day-head">
+          <h3>Sun, Jun 20</h3>
+          <span class="day-tag">Canyon &amp; Narrows</span>
+        </div>
+        <div class="slot"><span class="label">Morning</span><div contenteditable="true" data-field="morning">Walk to the town shuttle stop (Desert Pearl Inn is walkable) and catch an early park shuttle to Temple of Sinawava. Riverside Walk (paved, 1 mi) leads right into the Narrows &mdash; wade in at kid-depth from the bottom, no permit needed. Aim to be on the trail by 7&ndash;8am, before it gets hot.</div></div>
+        <div class="slot"><span class="label">Midday</span><div contenteditable="true" data-field="midday">Shuttle back to Desert Pearl Inn for pool time and AC &mdash; June afternoons hit 95&ndash;100&deg;F, so plan to be off the trail by 11am&ndash;noon.</div></div>
+        <div class="slot"><span class="label">Afternoon</span><div contenteditable="true" data-field="afternoon">Once it cools slightly, Lower Emerald Pool Trail from the Zion Lodge shuttle stop (easy, mostly paved, waterfall payoff).</div></div>
+        <div class="slot"><span class="label">Evening</span><div contenteditable="true" data-field="evening">Dinner in Springdale; sunset views near the Canyon Junction bridge.</div></div>
+      </div>
+    </div>
+
+    <div class="day-card" data-day="day3">
+      <div class="card">
+        <div class="day-head">
+          <h3>Mon, Jun 21</h3>
+          <span class="day-tag">Flex Day</span>
+        </div>
+        <div class="slot"><span class="label">Morning</span><div contenteditable="true" data-field="morning">Second early start: revisit the Narrows for more wading, or do Middle Emerald Pool / the Zion Human History Museum if anyone needs a break from water. Whatever got bumped by heat or weather on Day 2 moves here.</div></div>
+        <div class="slot"><span class="label">Midday</span><div contenteditable="true" data-field="midday">Back to the pool at Desert Pearl Inn during peak heat.</div></div>
+        <div class="slot"><span class="label">Afternoon</span><div contenteditable="true" data-field="afternoon">Canyon Overlook Trail near the Zion&ndash;Mt. Carmel Tunnel (short, no shuttle needed, big payoff views) &mdash; a good family-friendly stand-in for Angels Landing.</div></div>
+        <div class="slot"><span class="label">Evening</span><div contenteditable="true" data-field="evening">Relaxed dinner, pack bags for the drive back to Vegas.</div></div>
+      </div>
+    </div>
+
+    <div class="day-card" data-day="day4">
+      <div class="card">
+        <div class="day-head">
+          <h3>Tue, Jun 22</h3>
+          <span class="day-tag">Departure</span>
+        </div>
+        <div class="slot"><span class="label">Morning</span><div contenteditable="true" data-field="morning">Pack up; one more short walk (Pa'rus Trail) or coffee in Springdale before checkout.</div></div>
+        <div class="slot"><span class="label">Midday</span><div contenteditable="true" data-field="midday">Check out of Desert Pearl Inn, then drive Springdale &rarr; Las Vegas (~2.5 hrs).</div></div>
+        <div class="slot"><span class="label">Afternoon/Evening</span><div contenteditable="true" data-field="evening">Return the rental car at LAS with a buffer for summer traffic and TSA lines, then fly (or drive) home to San Diego.</div></div>
+      </div>
+    </div>
+    <p class="edit-hint">Edits save automatically on this device.</p>
+  </section>
+
+  <!-- ---------------- Lodging ---------------- -->
+  <section class="block" id="lodging">
+    <div class="block-head">
+      <span class="num">2</span>
+      <h2>Lodging</h2>
+    </div>
+
+    <div class="lodging-card card">
+      <div class="lodging-title">
+        <h3>Desert Pearl Inn</h3>
+        <span class="status-pill confirmed">Confirmed</span>
+      </div>
+
+      <dl class="details">
+        <dt>Address</dt>
+        <dd>
+          707 Zion Park Blvd., Springdale, UT 84767<br>
+          <a class="map-link" id="mapsLink" href="#" target="_blank" rel="noopener">Get directions &rarr;</a>
+        </dd>
+
+        <dt>Check-in</dt>
+        <dd>Saturday, June 19, 2027</dd>
+
+        <dt>Check-out</dt>
+        <dd>Tuesday, June 22, 2027 &middot; 3 nights</dd>
+
+        <dt>Booking #</dt>
+        <dd>
+          <div class="booking-row">
+            <span class="booking-num" id="bookingNum">9102392475280</span>
+            <button class="btn" id="copyBtn" type="button">Copy</button>
+          </div>
+        </dd>
+
+        <dt>Booked under</dt>
+        <dd>Michael Petrillo &middot; confirmation sent to michael.j.petrillo@gmail.com</dd>
+
+        <dt>Why here</dt>
+        <dd>Walkable to the town shuttle stop &mdash; no need to drive into the park. On-site pool for a midday heat break.</dd>
+      </dl>
+
+      <div class="card-foot">
+        <div class="total-paid">
+          <small>Total paid</small>
+          $1,306.98
+        </div>
+        <div class="total-paid" style="text-align:right;">
+          <small>3 nights, incl. tax &amp; fees</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="lodging-card card">
+      <div class="lodging-title">
+        <h3>Las Vegas hotel</h3>
+        <span class="status-pill tbd">Not booked</span>
+      </div>
+      <p style="margin: 0.9rem 0 0; font-size: 0.9rem; color: var(--ink-700);">
+        Only needed if you choose the Friday, June 18 arrival option. If you fly or drive in Saturday morning
+        instead, you can skip a Vegas night entirely. Book off-Strip and family-friendly if you go this route
+        &mdash; you'll want an early, quiet night before the Zion drive.
+      </p>
+    </div>
+  </section>
+
+  <!-- ---------------- Reservations ---------------- -->
+  <section class="block" id="reservations">
+    <div class="block-head">
+      <span class="num">3</span>
+      <h2>Reservations Needed</h2>
+    </div>
+    <p class="block-sub">Check off as you book. Deadlines are guidance for peak-June demand, not hard cutoffs.</p>
+
+    <div class="card">
+      <ul class="reslist" id="resList">
+        <li>
+          <input type="checkbox" id="res1">
+          <div class="res-body">
+            <label for="res1" class="res-title">Rental car (LAS) <span class="res-deadline">Book ASAP</span></label>
+            <p class="res-note">Summer inventory in Vegas sells out early; add car seats/boosters now if you're not bringing your own.</p>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="res2" checked>
+          <div class="res-body">
+            <label for="res2" class="res-title">Desert Pearl Inn <span class="res-deadline done">Confirmed</span></label>
+            <p class="res-note">#9102392475280 &middot; 3 nights, June 19&ndash;22 &middot; $1,306.98 paid.</p>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="res3">
+          <div class="res-body">
+            <label for="res3" class="res-title">Las Vegas hotel <span class="res-deadline">Only if arriving Fri Jun 18</span></label>
+            <p class="res-note">Book once you settle on the Friday-arrival option; skip entirely if driving/flying in Saturday.</p>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="res4">
+          <div class="res-body">
+            <label for="res4" class="res-title">Narrows gear rental <span class="res-deadline">1&ndash;2 wks ahead</span></label>
+            <p class="res-note">Water shoes/neoprene socks, trekking pole, and a dry bag for 4 from a Springdale outfitter (Zion Adventure Co., Zion Outfitter, or Zion Guru). Reserve online for a family of 4 in peak June rather than risk a walk-in.</p>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="res5">
+          <div class="res-body">
+            <label for="res5" class="res-title">Zion park entrance pass <span class="res-deadline">Buy anytime, no date lock</span></label>
+            <p class="res-note">$35/vehicle (7-day) or an America the Beautiful annual pass ($80) &mdash; available at the gate or online, no advance date booking required.</p>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="res6">
+          <div class="res-body">
+            <label for="res6" class="res-title">Zion Canyon shuttle <span class="res-deadline">Recheck 2&ndash;3 wks out</span></label>
+            <p class="res-note">No separate rider reservation currently required, but NPS has changed this policy season to season &mdash; confirm on nps.gov/zion shortly before the trip.</p>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="res7">
+          <div class="res-body">
+            <label for="res7" class="res-title">Angels Landing permit lottery <span class="res-deadline">Optional &mdash; adults only</span></label>
+            <p class="res-note">Seasonal lottery opens ~2 months ahead (or a day-before lottery via recreation.gov). Not recommended as a family hike with elementary-age kids given the chains and exposure &mdash; Canyon Overlook Trail is the swap-in on Day 3.</p>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="res8">
+          <div class="res-body">
+            <label for="res8" class="res-title">Springdale dinner reservations <span class="res-deadline">Nice-to-have</span></label>
+            <p class="res-note">Popular spots can fill up in peak June; worth a reservation a few days ahead once dates are locked.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ---------------- Packing ---------------- -->
+  <section class="block" id="packing">
+    <div class="block-head">
+      <span class="num">4</span>
+      <h2>Packing &amp; Prep</h2>
+    </div>
+    <p class="block-sub">High desert in June, with two elementary-age kids.</p>
+
+    <div class="card">
+      <div class="info-sub">
+        <h4>Sun &amp; heat</h4>
+        <ul class="checklist" id="packingListHeat">
+          <li><input type="checkbox" id="pk1"><label for="pk1">Wide-brim sun hats for everyone, with a chin strap for the kids</label></li>
+          <li><input type="checkbox" id="pk2"><label for="pk2">Sunglasses (with a retainer strap for the kids)</label></li>
+          <li><input type="checkbox" id="pk3"><label for="pk3">Sunscreen &mdash; a stick for easy kid reapplication, plus a bottle for bodies</label></li>
+          <li><input type="checkbox" id="pk4"><label for="pk4">Lightweight long-sleeve/UPF shirts for the hottest midday stretch</label></li>
+          <li><input type="checkbox" id="pk5"><label for="pk5">Cooling towel or bandana per person</label></li>
+        </ul>
+      </div>
+      <div class="info-sub">
+        <h4>Water &amp; the Narrows</h4>
+        <ul class="checklist" id="packingListWater">
+          <li><input type="checkbox" id="pk6"><label for="pk6">Hydration bladder or bottles, 3L+ per person</label></li>
+          <li><input type="checkbox" id="pk7"><label for="pk7">Electrolyte packets (kid-friendly flavors help)</label></li>
+          <li><input type="checkbox" id="pk8"><label for="pk8">Quick-dry shorts/swimsuits to wear under clothes for wading</label></li>
+          <li><input type="checkbox" id="pk9"><label for="pk9">Full change of dry clothes for after the Narrows</label></li>
+          <li><input type="checkbox" id="pk10"><label for="pk10">Water shoes with good grip (or confirm the outfitter rental covers all 4)</label></li>
+          <li><input type="checkbox" id="pk11"><label for="pk11">Dry bag for phones/valuables in the river</label></li>
+          <li><input type="checkbox" id="pk12"><label for="pk12">Swimsuits + pool towels for Desert Pearl Inn</label></li>
+        </ul>
+      </div>
+      <div class="info-sub">
+        <h4>Hiking &amp; gear</h4>
+        <ul class="checklist" id="packingListGear">
+          <li><input type="checkbox" id="pk13"><label for="pk13">Sturdy trail shoes/sandals for non-Narrows hikes</label></li>
+          <li><input type="checkbox" id="pk14"><label for="pk14">Small daypack per adult</label></li>
+          <li><input type="checkbox" id="pk15"><label for="pk15">Headlamp or flashlight</label></li>
+          <li><input type="checkbox" id="pk16"><label for="pk16">Portable phone/camera battery pack</label></li>
+          <li><input type="checkbox" id="pk17"><label for="pk17">Offline maps downloaded (cell service is spotty in the canyon)</label></li>
+          <li><input type="checkbox" id="pk18"><label for="pk18">Basic first-aid kit, including blister care</label></li>
+        </ul>
+      </div>
+      <div class="info-sub">
+        <h4>Kids &amp; logistics</h4>
+        <ul class="checklist" id="packingListKids">
+          <li><input type="checkbox" id="pk19"><label for="pk19">Car seats/boosters (bring your own or confirm with the rental car)</label></li>
+          <li><input type="checkbox" id="pk20"><label for="pk20">Snacks and car entertainment for the Vegas&ndash;Zion drives</label></li>
+          <li><input type="checkbox" id="pk21"><label for="pk21">Park entrance pass or receipt, plus ID for all travelers</label></li>
+          <li><input type="checkbox" id="pk22"><label for="pk22">Reusable bag for wet gear on travel days</label></li>
+          <li><input type="checkbox" id="pk23"><label for="pk23">Cash for tipping/small Springdale vendors</label></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- Contingency ---------------- -->
+  <section class="block" id="contingency">
+    <div class="block-head">
+      <span class="num">5</span>
+      <h2>Contingency Notes</h2>
+    </div>
+
+    <div class="risk-card card">
+      <div class="risk-title">
+        <span class="risk-icon">&#9728;</span>
+        <h4>Extreme heat (95&ndash;100&deg;F+)</h4>
+      </div>
+      <p>Front-load anything strenuous before 11am&ndash;noon, then retreat to the Desert Pearl Inn pool or AC through the hottest hours &mdash; both day cards above are built around this. Carry more water than feels necessary, and watch the kids for early heat-exhaustion signs: fatigue, headache, nausea, or a stop in sweating. If anyone shows those signs, get into shade/AC and hydrate immediately rather than pushing on. The Zion Human History Museum (air conditioned) is a good bail-out stop on the hottest afternoons.</p>
+    </div>
+
+    <div class="risk-card card">
+      <div class="risk-title">
+        <span class="risk-icon">&#9928;</span>
+        <h4>Flash flood risk in the Narrows</h4>
+      </div>
+      <p>Even kid-depth, bottom-up wading is subject to closures and warnings. Check the daily flash-flood forecast posted at the Zion Canyon Visitor Center (or the NPS Zion app) the morning of each Narrows attempt. If the forecast reads "possible" or worse, or there's any thunderstorm activity in the region &mdash; even miles upstream and out of sight &mdash; skip the river that day. Swap in the paved portion of Riverside Walk, Emerald Pools, or the Day 3 flex slot instead. Never enter the narrow canyon sections during or right after a storm, even if it looks clear locally.</p>
+    </div>
+
+    <div class="risk-card card">
+      <div class="risk-title">
+        <span class="risk-icon">&#9873;</span>
+        <h4>Angels Landing lottery</h4>
+      </div>
+      <p>If an adult wants to attempt it solo, apply to the seasonal lottery (opens roughly two months ahead) or try the day-before lottery via recreation.gov. Given the chains and exposed drop-offs, it's not recommended as a family hike with elementary-age kids &mdash; the itinerary above swaps in Canyon Overlook Trail on Day 3, which delivers similar views without the exposure.</p>
+    </div>
+
+    <div class="risk-card card">
+      <div class="risk-title">
+        <span class="risk-icon">&#8635;</span>
+        <h4>Built-in flex day</h4>
+      </div>
+      <p>Day 3 (Monday) is intentionally unscheduled. If heat, a flood warning, or just tired kids knock out a Day 2 plan, move it to Day 3 rather than trying to force everything into one day.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Las Vegas &amp; Zion &middot; June 18/19&ndash;22, 2027 &middot; Edits save automatically to this device.</p>
+    <div class="footer-actions">
+      <button class="linklike" id="printBtn" type="button">Print / Save PDF</button>
+      <button class="linklike" id="resetBtn" type="button">Reset to defaults</button>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var STORE_KEY = "vegasZionTrip2027";
+
+  function loadStore() {
+    try {
+      return JSON.parse(localStorage.getItem(STORE_KEY)) || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveStore(store) {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(store));
+    } catch (e) { /* storage unavailable — edits just won't persist */ }
+  }
+
+  var store = loadStore();
+
+  /* ---------- Google Maps link ---------- */
+  var address = "707 Zion Park Blvd, Springdale, UT 84767";
+  document.getElementById("mapsLink").href =
+    "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+
+  /* ---------- Countdown ---------- */
+  var checkInDate = new Date(2027, 5, 19, 0, 0, 0); // June 19, 2027, local time
+
+  function pad(n) { return String(n).padStart(2, "0"); }
+
+  function updateCountdown() {
+    var now = new Date();
+    var diff = checkInDate - now;
+    var label = document.getElementById("countdown-label");
+
+    if (diff <= 0) {
+      document.getElementById("cd-days").textContent = "0";
+      document.getElementById("cd-hours").textContent = "00";
+      document.getElementById("cd-mins").textContent = "00";
+      document.getElementById("cd-secs").textContent = "00";
+      label.textContent = "Enjoy the trip!";
+      label.classList.add("arrived");
+      return;
+    }
+
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    var hours = Math.floor((totalSeconds % 86400) / 3600);
+    var mins = Math.floor((totalSeconds % 3600) / 60);
+    var secs = totalSeconds % 60;
+
+    document.getElementById("cd-days").textContent = days;
+    document.getElementById("cd-hours").textContent = pad(hours);
+    document.getElementById("cd-mins").textContent = pad(mins);
+    document.getElementById("cd-secs").textContent = pad(secs);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ---------- Copy booking number ---------- */
+  var copyBtn = document.getElementById("copyBtn");
+  var bookingNum = document.getElementById("bookingNum").textContent.trim();
+
+  copyBtn.addEventListener("click", function () {
+    function done() {
+      copyBtn.textContent = "Copied!";
+      copyBtn.classList.add("copied");
+      setTimeout(function () {
+        copyBtn.textContent = "Copy";
+        copyBtn.classList.remove("copied");
+      }, 1600);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(bookingNum).then(done).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+
+    function fallbackCopy() {
+      var ta = document.createElement("textarea");
+      ta.value = bookingNum;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+  });
+
+  /* ---------- Itinerary persistence ---------- */
+  document.querySelectorAll(".day-card").forEach(function (card) {
+    var day = card.getAttribute("data-day");
+    card.querySelectorAll("[contenteditable]").forEach(function (el) {
+      var field = el.getAttribute("data-field");
+
+      var saved = store.itinerary && store.itinerary[day] && store.itinerary[day][field];
+      if (saved !== undefined) el.textContent = saved;
+
+      el.addEventListener("blur", function () {
+        store.itinerary = store.itinerary || {};
+        store.itinerary[day] = store.itinerary[day] || {};
+        store.itinerary[day][field] = el.textContent;
+        saveStore(store);
+      });
+
+      el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") { e.preventDefault(); el.blur(); }
+      });
+    });
+  });
+
+  /* ---------- Checkbox persistence (reservations + packing) ---------- */
+  var allCheckboxes = document.querySelectorAll('#resList input[type=checkbox], #packing input[type=checkbox]');
+  allCheckboxes.forEach(function (cb) {
+    var saved = store.checks && store.checks[cb.id];
+    if (saved !== undefined) cb.checked = saved;
+
+    cb.addEventListener("change", function () {
+      store.checks = store.checks || {};
+      store.checks[cb.id] = cb.checked;
+      saveStore(store);
+    });
+  });
+
+  /* ---------- Print ---------- */
+  document.getElementById("printBtn").addEventListener("click", function () {
+    window.print();
+  });
+
+  /* ---------- Reset ---------- */
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    if (!confirm("Reset all edits and checkboxes back to defaults?")) return;
+    localStorage.removeItem(STORE_KEY);
+    location.reload();
+  });
+
+})();
+</script>
+</body>
+</html>
