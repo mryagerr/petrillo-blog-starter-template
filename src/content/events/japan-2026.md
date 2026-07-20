@@ -1,5 +1,5 @@
 ---
-title: "Japan 2026"
+title: "Japan 2026 Trip"
 description: "19 nights, 4 legs, 0 cars — Disney, Hakone hot springs, Kyoto at dawn, Universal Studios Japan, and a birthday in Shibuya."
 date: "Jun 24 2026"
 location: "Tokyo Bay · Hakone · Osaka · Tokyo"
